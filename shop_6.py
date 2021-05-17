@@ -25,12 +25,12 @@ sleep_timeout=60
 basket = driver.find_element_by_css_selector('.wpmenucartli>a')
 basket.click()
 sleep_timeout=60
-#
-# delete = driver.find_element_by_css_selector('[data-product_id="182"]').click()
-# sleep_timeout=60
-#
-# Undo = driver.find_element_by_css_selector(".woocommerce-message>a").click()
-# sleep_timeout=60
+
+delete = driver.find_element_by_css_selector('[data-product_id="182"]').click()
+sleep_timeout=60
+
+Undo = driver.find_element_by_css_selector(".woocommerce-message>a").click()
+sleep_timeout=60
 
 Quantity = driver.find_element_by_css_selector('[name="cart[045117b0e0a11a242b9765e79cbf113f][qty]"]').clear()
 Quantity = driver.find_element_by_css_selector('[name="cart[045117b0e0a11a242b9765e79cbf113f][qty]"]')
@@ -47,3 +47,4 @@ apply = driver.find_element_by_css_selector('[name="apply_coupon"]')
 apply.click()
 sleep_timeout=60
 texst = WebDriverWait(driver, 60).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, '.woocommerce-error>li'), "Please enter a coupon code."))
+driver.quit()

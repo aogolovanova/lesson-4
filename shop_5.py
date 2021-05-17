@@ -39,3 +39,4 @@ basket.click()
 
 Subtotal = WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, '[data-title="Subtotal"]>span'), "180.00"))
 Total = WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, '.cart_item :nth-child(6)>span'), "180.00"))
+driver.quit()

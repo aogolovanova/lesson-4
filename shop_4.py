@@ -33,3 +33,4 @@ img.click()
 
 close = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '[class="pp_close"]')) )
 close.click()
+driver.quit()

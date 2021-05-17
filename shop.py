@@ -26,3 +26,4 @@ if element_get_text == str("HTML5 Forms"):
     print("заголовок: HTML5 Forms")
 else:
     print("Ошибка!")
+driver.quit()

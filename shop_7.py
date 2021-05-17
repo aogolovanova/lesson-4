@@ -20,8 +20,6 @@ basket = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELE
 basket.click()
 sleep_timeout=60
 
-basket = driver.find_element_by_css_selector('.wpmenucartli>a')
-basket.click()
 
 PROCEED = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '[href="http://practice.automationtesting.in/checkout/"]')))
 PROCEED.click()
@@ -60,3 +58,4 @@ Check_Payments = driver.find_element_by_id("payment_method_cheque").click()
 place_order = driver.find_element_by_id('place_order').click()
 texst = WebDriverWait(driver, 60).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, '.woocommerce-thankyou-order-received'), "Thank you. Your order has been received."))
 Payment_Method  = WebDriverWait(driver, 60).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, '.woocommerce>ul :nth-child(4)>strong'), "Check Payments"))
+driver.quit()

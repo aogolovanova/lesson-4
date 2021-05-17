@@ -26,3 +26,4 @@ if len(product) == 3:
     print("В корзине 3 товара")
 else:
     print("Ошибка!")
+driver.quit()

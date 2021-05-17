@@ -39,4 +39,4 @@ if select.all_selected_options[5].text == ("Sort by price: high to low"):
     print("Sort by price: high to low")
 else:
     print("Ошибка")
-
+driver.quit()
